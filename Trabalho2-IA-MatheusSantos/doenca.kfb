@@ -1,0 +1,93 @@
+#Aluno: Matheus Barbosa Santos
+#Matricula: 170053016
+
+# doenca.febre (febre, dia_febre, doenca)
+
+febre (alta, 4, dengue)
+febre (alta, 5, dengue)
+febre (alta, 6, dengue)
+febre (alta, 7, dengue)
+febre (sem, 0, zika)
+febre (sub_febril, 1, zika)
+febre (sub_febril, 2, zika)
+febre (alta, 2, chikungunya)
+febre (alta, 3, chikungunya)
+
+# doenca.manchas (dia_manchas, doenca)
+
+manchas (4, dengue)
+manchas (5, dengue)
+manchas (10, dengue)
+manchas (5, dengue)
+manchas (acima_5, dengue)
+manchas (1, zika)
+manchas (2, zika)
+manchas (2, chikungunya)
+manchas (3, chikungunya)
+manchas (4, chikungunya)
+manchas (5, chikungunya)
+
+# doenca.dor_muscular (nivel, doenca)
+
+dor_muscular (3, dengue)
+dor_muscular (2, zika)
+dor_muscular (1, chikungunya)
+
+# doenca.dor_articulacao (nivel, doenca)
+
+dor_articulacao (1, dengue)
+dor_articulacao (2, zika)
+dor_articulacao (3, chikungunya)
+
+# doenca.intensidade_dor_artic (intensidade, doenca)
+
+intensidade_dor_artic (leve, dengue)
+intensidade_dor_artic (leve, zika)
+intensidade_dor_artic (moderada, zika)
+intensidade_dor_artic (moderada, chikungunya)
+intensidade_dor_artic (intensa, chikungunya)
+
+# doenca.edema (intensidade, doenca)
+
+edema (nao, dengue)
+edema (leve, zika)
+edema (moderada, chikungunya)
+edema (intensa, chikungunya)
+
+# doenca.conjuntivite (ocorrencia, probabilidade, doenca)
+
+conjuntivite (n, 30, dengue)
+conjuntivite (s, 30, dengue)
+conjuntivite (s, 50, zika)
+conjuntivite (s, 30, chikungunya)
+
+# doenca.dor_cabeca (nivel, doenca)
+
+dor_cabeca (3, dengue)
+dor_cabeca (2, zika)
+dor_cabeca (2, chikungunya)
+
+# doenca.coceira (intensidade, doenca)
+
+coceira (leve, dengue)
+coceira (moderada, zika)
+coceira (leve, chikungunya)
+
+# doenca.hipertrofia (intensidade, doenca)
+
+hipertrofia (leve, dengue)
+hipertrofia (intensa, zika)
+hipertrofia (moderada, chikungunya)
+
+# doenca.discrasia (intensidade, doenca)
+
+discrasia (moderada, dengue)
+discrasia (ausente, zika)
+discrasia (leve, chikungunya)
+
+# doenca.acometimento (acometimento, frequencia, neonato, doenca)
+
+acometimento (s, raro, n, dengue)
+acometimento (n, raro, n, dengue)
+acometimento (s, frequente, n, zika)
+acometimento (s, frequente, s, chikungunya)

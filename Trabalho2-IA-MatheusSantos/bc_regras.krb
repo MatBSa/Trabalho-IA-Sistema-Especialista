@@ -1,0 +1,58 @@
+#Aluno: Matheus Barbosa Santos
+#Matricula: 170053016
+
+diagnostico_1
+    use diagnostico_1 ($febre, $dia_febre, $dia_manchas, $dorMuscular, $doenca)    
+    when
+	doenca.febre ($febre, $dia_febre, $doenca1)
+	doenca.manchas ($dia_manchas, $doenca2)
+	doenca.dor_muscular ($dorMuscular, $doenca3)
+	$doenca = def_doenca($doenca1, $doenca2, $doenca3)
+
+diagnostico_2
+    use diagnostico_2 ($dorArticulacao, $intesiDorArtic, $edema, $doenca)    
+    when
+	doenca.dor_articulacao ($dorArticulacao, $doenca4)
+	doenca.intensidade_dor_artic ($intesiDorArtic, $doenca5)
+	doenca.edema ($edema, $doenca6)
+	$doenca = def_doenca($doenca4, $doenca5, $doenca6)
+	
+
+diagnostico_3
+    use diagnostico_3 ($conjuntivite, $dorCabeca, $coceira, $doenca)    
+    when
+	doenca.conjuntivite ($conjuntivite, $probabilidade, $doenca7)
+	doenca.dor_cabeca ($dorCabeca, $doenca8)
+	doenca.coceira ($coceira, $doenca9)
+	$doenca = def_doenca($doenca7, $doenca8, $doenca9)
+
+diagnostico_4
+    use diagnostico_4 ($hipertrofia, $discrasia, $acometimento, $neonato, $doenca)    
+    when
+	doenca.hipertrofia ($hipertrofia, $doenca10)
+	doenca.discrasia ($discrasia, $doenca11)
+	doenca.acometimento ($acometimento, $frequencia, $neonato, $doenca12)
+	$doenca = def_doenca($doenca10, $doenca11, $doenca12)
+
+resulta_diagnostico
+    use diagnostico_resultado ($febre, $dia_febre, $dia_manchas, $dorMuscular, $dorArticulacao, $intesiDorArtic, $edema, $conjuntivite, $dorCabeca, $coceira, $hipertrofia, $discrasia, $acometimento, $neonato, $doenca)    
+    when
+	diagnostico_1 ($febre, $dia_febre, $dia_manchas, $dorMuscular, $doenca51)
+	diagnostico_2 ($dorArticulacao, $intesiDorArtic, $edema, $doenca52)
+	diagnostico_3 ($conjuntivite, $dorCabeca, $coceira, $doenca53)
+	diagnostico_4 ($hipertrofia, $discrasia, $acometimento, $neonato, $doenca54)
+	$doenca = def_doenca2($doenca51, $doenca52, $doenca53, $doenca54)
+
+bc_extras
+    def def_doenca(doenca1, doenca2, doenca3):
+        if doenca1 == doenca2 and doenca2 == doenca3: return  doenca1 
+        if doenca1 == doenca2: return  doenca1 
+        if doenca1 == doenca3: return  doenca1
+        if doenca2 == doenca3: return doenca2
+
+    def def_doenca2(doenca1, doenca2, doenca3, doenca4):
+        if doenca1 == doenca2 and doenca2 == doenca3 and doenca3 == doenca4: return  doenca1 
+        if doenca1 == doenca2 and doenca2 == doenca3: return  doenca1
+        if doenca1 == doenca2 and doenca2 == doenca4: return  doenca1
+        if doenca1 == doenca4 and doenca4 == doenca3: return  doenca1
+        if doenca4 == doenca2 and doenca2 == doenca3: return  doenca1
