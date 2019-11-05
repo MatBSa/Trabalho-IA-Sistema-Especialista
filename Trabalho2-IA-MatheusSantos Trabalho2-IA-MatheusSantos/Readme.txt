@@ -1,5 +1,4 @@
 Aluno:Matheus Barbosa Santos
-Matricula: 170053016
 
 Para executar o programa basta inserir arquivo Trabalho-IA-Sistema-Especialista no diretorio Exemplo do sistema Pyke.
 
